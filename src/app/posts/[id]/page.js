@@ -1,6 +1,8 @@
 async function PostPage({ params }) {
-    const id = await params.id;
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+
+    //trying to get rid of params error
+    const postId = await Promise.resolve(params.id);
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
     const post = await response.json();
 
     return (
