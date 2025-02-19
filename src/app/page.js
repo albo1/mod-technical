@@ -11,7 +11,7 @@ async function Home() {
         <ul className="space-y-4">
           {posts.map((post) => (
             <li key={post.id} className="p-4 border rounded-lg">
-              <a href="#" className="text-lg hover:text-blue-600">
+              <a href={`/posts/${post.id}`} className="text-lg hover:text-blue-600">
                 {post.title}
               </a>
             </li>
