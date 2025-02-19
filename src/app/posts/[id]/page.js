@@ -1,5 +1,6 @@
 async function PostPage({ params }) {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`);
+    const id = await params.id;
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
     const post = await response.json();
 
     return (
@@ -13,8 +14,8 @@ async function PostPage({ params }) {
             </div>
         </header>
         <main className="container mx-auto px-4 py-8">
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
+            <h1 className="text-3xl font-bold text-center mb-8">{post.title}</h1>
+            <p className="p-6 border rounded-lg shadow-sm bg-white max-w-2xl mx-auto">{post.body}</p>
         </main>
         </div>
     );
