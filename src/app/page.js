@@ -1,6 +1,6 @@
 async function Home() {
   // Fetch first 2 posts from JSONPlaceholder
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=2');
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10');
   const posts = await response.json();
 
   return (
