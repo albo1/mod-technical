@@ -1,9 +1,14 @@
 async function Home() {
-  // Fetch first 2 posts from JSONPlaceholder
+  // fetch all 10 posts
   const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10');
   const posts = await response.json();
 
   return (
+    <div>
+    <header className="bg-[#004C54] text-white py-8 mb-8">
+      
+    </header>
+
     <main className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8 text-center">Blog Posts</h1>
       
@@ -19,6 +24,7 @@ async function Home() {
         </ul>
       </div>
     </main>
+    </div>
   );
 }
 
